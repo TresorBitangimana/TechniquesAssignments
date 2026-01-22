@@ -35,6 +35,7 @@ public class WeeklyGasAverages{
                 smallest = weeklyGasPrices.get(i);
                 //gets the week of the average
                 smallestIndex = i+1;
+                break;
             }
         }
 
@@ -45,6 +46,7 @@ public class WeeklyGasAverages{
                 largest = weeklyGasPrices.get(i);
                 //gets the week of the average
                 largestIndex = i+1;
+                break;
             }
         }
 
