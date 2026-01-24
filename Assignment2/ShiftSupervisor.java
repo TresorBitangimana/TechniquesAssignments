@@ -1,0 +1,57 @@
+package Assignment2;
+
+public class ShiftSupervisor extends Employee{
+    
+    private double salary;
+    private double bonus;
+
+    public ShiftSupervisor(String n, String num, String date, double sal, double b){
+        super(n, num, date);
+
+        salary = sal;
+        bonus = b;
+    }
+
+    public ShiftSupervisor(){
+        salary = 0.0;
+        bonus = 0.0;
+    }
+
+    public void setSalary(double s){
+        salary = s;
+    }
+
+    public void setBonus(double b){
+        bonus = b;
+    }
+
+    public double getSalary(){
+        return salary;
+    }
+
+    public double getBonus(){
+        return bonus;
+    }
+
+    @Override
+    public String toString(){
+        return "Salary: "+salary+" \n Bonus: "+bonus; 
+    }
+
+    public static void main(String[] args) {
+        
+        //test
+        ShiftSupervisor worker = new ShiftSupervisor("Sam", "9872-D", "Jan 27/ 2025", 50000, 10000);
+
+        System.out.println(worker.getName());
+        System.out.println(worker.getEmploeeNumber());
+        System.out.println(worker.getHireDate());
+        System.out.println(worker.getSalary());;
+        System.out.println(worker.getBonus());
+
+        worker.setName("Bob");
+        System.out.println(worker.getName());
+
+    }
+
+}
