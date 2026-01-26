@@ -1,3 +1,12 @@
+/**
+ * @author Tresor Bitangimana
+ * @since Jan 26/ 2026
+ * 
+ *  ShiftSpervisor class, create a shift supervisor object that extends the employee class
+ *  it stoles the employees salary and bonus.
+ */
+
+
 package Assignment2;
 
 public class ShiftSupervisor extends Employee{

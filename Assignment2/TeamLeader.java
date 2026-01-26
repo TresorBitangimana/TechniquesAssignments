@@ -1,3 +1,12 @@
+/**
+ * @author Tresor Bitangimana
+ * @since Jan 26/ 2026
+ * 
+ *  TeamLeader class, create a team leader class that extends the production worker class,
+ *  This class stoles the production workers monthly bonus, required trainign hours and 
+ *  the training hours attended.
+ */
+
 package Assignment2;
 
 public class TeamLeader extends ProductionWorker{

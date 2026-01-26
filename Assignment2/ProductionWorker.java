@@ -1,3 +1,12 @@
+/**
+ * @author Tresor Bitangimana
+ * @since Jan 26/ 2026
+ * 
+ *  Production worker, creates a production worker object that extends the employee class
+ *  this class stoles the employees shift and pay rate.
+ */
+
+
 package Assignment2;
 
 public class ProductionWorker extends Employee{

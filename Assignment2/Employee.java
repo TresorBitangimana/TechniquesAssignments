@@ -1,3 +1,11 @@
+/**
+ * @author Tresor Bitangimana
+ * @since Jan 26/ 2026
+ * 
+ *  Employee class, create an employee and stoles the employees name
+ *  employee number and hire date.
+ */
+
 package Assignment2;
 
 public class Employee {
