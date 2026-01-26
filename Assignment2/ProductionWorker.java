@@ -6,8 +6,8 @@ public class ProductionWorker extends Employee{
     private int shift;
     //field for the employee pay rate
     private double payRate;
-    public int DAY_SHIFT = 1;
-    public int NIGHT_SHIFT = 2;
+    public final int DAY_SHIFT = 1;
+    public final int NIGHT_SHIFT = 2;
     
     /**
      * constructor method
@@ -24,6 +24,7 @@ public class ProductionWorker extends Employee{
     }
 
     public ProductionWorker(){
+        super();
         shift = 0;
         payRate = 0;
     }
@@ -72,9 +73,9 @@ public class ProductionWorker extends Employee{
     @Override
     public String toString(){
         if(shift == 1)
-            return "Shift: Day shift \n Pay rate: "+payRate;
+            return super.toString()+"Shift: Day shift \n Pay rate: "+payRate;
         else
-            return "Shift: Night shift \n Pay rate: "+payRate;
+            return super.toString()+"Shift: Night shift \n Pay rate: "+payRate;
 
 
     }
@@ -86,7 +87,7 @@ public class ProductionWorker extends Employee{
         ProductionWorker worker = new ProductionWorker("John", "9872-D", "Jan 27/ 2025", 1, 15.5);
 
         System.out.println(worker.getName());
-        System.out.println(worker.getEmploeeNumber());
+        System.out.println(worker.getEmployeeNumber());
         System.out.println(worker.getHireDate());
         System.out.println(worker.getShift());;
         System.out.println(worker.getPayRate());

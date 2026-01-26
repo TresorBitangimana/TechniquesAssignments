@@ -13,6 +13,7 @@ public class ShiftSupervisor extends Employee{
     }
 
     public ShiftSupervisor(){
+        super();
         salary = 0.0;
         bonus = 0.0;
     }
@@ -35,7 +36,7 @@ public class ShiftSupervisor extends Employee{
 
     @Override
     public String toString(){
-        return "Salary: "+salary+" \n Bonus: "+bonus; 
+        return super.toString()+"Salary: "+salary+" \n Bonus: "+bonus; 
     }
 
     public static void main(String[] args) {
@@ -44,7 +45,7 @@ public class ShiftSupervisor extends Employee{
         ShiftSupervisor worker = new ShiftSupervisor("Sam", "9872-D", "Jan 27/ 2025", 50000, 10000);
 
         System.out.println(worker.getName());
-        System.out.println(worker.getEmploeeNumber());
+        System.out.println(worker.getEmployeeNumber());
         System.out.println(worker.getHireDate());
         System.out.println(worker.getSalary());;
         System.out.println(worker.getBonus());

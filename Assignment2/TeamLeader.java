@@ -16,6 +16,7 @@ public class TeamLeader extends ProductionWorker{
     }
 
     public TeamLeader(){
+        super();
         monthlyBonus = 0;
         requiredTrainingHours = 0;
         trainingHoursAttended = 0;
@@ -47,7 +48,7 @@ public class TeamLeader extends ProductionWorker{
 
     @Override
     public String toString(){
-        return "Monthly bonus: "+monthlyBonus+
+        return super.toString()+"Monthly bonus: "+monthlyBonus+
                 " \nRequired training hours: "+requiredTrainingHours+
                 "\nTraining hours attended"+trainingHoursAttended;
     }
@@ -59,7 +60,7 @@ public class TeamLeader extends ProductionWorker{
         TeamLeader leader = new TeamLeader("John", "9872-D", "Jan 27/ 2025", 1, 15.5, 1000, 5, 3);
 
         System.out.println(leader.getName());
-        System.out.println(leader.getEmploeeNumber());
+        System.out.println(leader.getEmployeeNumber());
         System.out.println(leader.getHireDate());
         System.out.println(leader.getShift());;
         System.out.println(leader.getPayRate());
