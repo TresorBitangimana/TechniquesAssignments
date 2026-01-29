@@ -1,20 +1,17 @@
 package InClass;
 
-public abstract class Main{
-
-    private int number = 10;
-
-    Main(int num1){
-        System.out.println(num1);
-    }
-
+public class Main{
     public static void main(String[] args) {
         
-        Main main = new Mini2Main(1, 2, 3);
-        System.out.println(main);
+        Person person = new Student("John", 19, "28037456");
 
+
+        Person[] people = {new Student("kin", 20, "80273456"),
+                            new ComputerScienceStudent("Josh", 17, "8672945")
+        };
+
+        for(int i = 0; i < people.length; i++){
+            System.out.println(people[i]);
+        }
     }
-
-    public abstract void setNum1(int number);
-
 }
