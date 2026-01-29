@@ -1,5 +1,4 @@
-package InClass;
-
+package StudyCase;
 
 public class ComputerScienceStudent extends Person{
     

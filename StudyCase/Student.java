@@ -1,4 +1,4 @@
-package InClass;
+package StudyCase;
 
 public class Student extends Person{
 
