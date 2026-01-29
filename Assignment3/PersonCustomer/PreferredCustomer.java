@@ -24,7 +24,6 @@ public class PreferredCustomer extends Customer{
     }
 
     public double getDiscountLevel() {
-        double discountLevel = 0;
 
         if(purchases >= 500 && purchases < 1000){
             discountLevel = 5;
