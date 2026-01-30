@@ -14,6 +14,7 @@ public class LabActivity extends GradedActivity{
     public static void main(String[] args){
 
         LabActivity lab = new LabActivity("TA Martin", 60);
+        System.out.println(lab.observer);
 
     }
 

@@ -26,7 +26,7 @@ public class PassFailExam extends PassFailActivity{
     //demo
     public static void main(String[] args) {
         
-        PassFailExam exam = new PassFailExam(10, 4, 60);
+        // PassFailExam exam = new PassFailExam(10, 4, 60);
 
     }
 }
