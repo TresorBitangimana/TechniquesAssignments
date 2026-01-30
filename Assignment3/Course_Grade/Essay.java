@@ -117,7 +117,28 @@ public class Essay extends GradedActivity{
      * @return the sum of all the scores
      */
     public double getScore(){
-        return grammer + spelling + correctLength + content;
+
+        double total = grammer + spelling + correctLength + content;
+
+        setScore(total);
+        return total;
+    }
+
+    //demo
+    public static void main(String[] args) {
+        
+        Essay essay = new Essay(30, 20, 10, 30);
+
+        System.out.println(essay.getSpelling());
+        System.out.println(essay.getGrammer());
+        System.out.println(essay.getCorrectLength());
+        System.out.println(essay.getContent());
+        System.out.println(essay.getScore());
+
+        essay.setCorrectLength(20);
+
+        System.out.println(essay.getScore());
+
     }
 
 }

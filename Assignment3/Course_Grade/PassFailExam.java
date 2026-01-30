@@ -10,6 +10,9 @@ public class PassFailExam extends PassFailActivity{
         super(minPassing);
         numQuestions = questions;
         numMissed = missed;
+        pointsEach = 100.0/numQuestions;
+        double score = (questions - missed) * pointsEach;
+        setScore(score);
     }
 
     public double getPointsEach(){
@@ -20,4 +23,10 @@ public class PassFailExam extends PassFailActivity{
         return numMissed;
     }
 
+    //demo
+    public static void main(String[] args) {
+        
+        PassFailExam exam = new PassFailExam(10, 4, 60);
+
+    }
 }

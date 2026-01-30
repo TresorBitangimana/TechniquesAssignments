@@ -8,6 +8,8 @@ public class FinalExam extends GradedActivity{
     public FinalExam(int questions, int missed){
         numQuestion = questions;
         numMissed = missed;
+        double score = (questions - missed) * (100.0 / questions);
+        setScore(score);
     }
 
     public int getNumQuestions(){
@@ -19,6 +21,18 @@ public class FinalExam extends GradedActivity{
     }
 
     public double getPointsEach(){
-        return (numQuestion - numMissed) / numQuestion * 100;
+        return (100.0 / numQuestion);
+    }
+
+    //demo
+    public static void main(String[] args) {
+        
+        FinalExam exam = new FinalExam(10, 6);
+
+        System.out.println(exam.getNumMissed());
+        System.out.println(exam.getNumQuestions());
+
+        System.out.println(exam.getPointsEach());
+
     }
 }

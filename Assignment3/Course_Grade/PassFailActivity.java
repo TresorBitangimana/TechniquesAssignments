@@ -10,7 +10,20 @@ public class PassFailActivity extends GradedActivity{
 
     @Override
     public char getGrade() {
-        return super.getGrade();
+        if(super.getScore() >= minPassingScore){
+            return 'P';
+        }
+        else{
+            return 'F';
+        }
     }
 
+
+    //demo
+    public static void main(String[] args) {
+        
+        PassFailActivity activity = new PassFailActivity(60);
+        activity.getGrade();
+
+    }
 }
