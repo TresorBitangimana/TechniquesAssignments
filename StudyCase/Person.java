@@ -6,7 +6,7 @@ public abstract class Person {
     int age;
 
     public Person(){
-        this.name = "";
+        this.name = "Unknown";
         this.age = 0;
     }
 
