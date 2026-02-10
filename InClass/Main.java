@@ -1,36 +1,29 @@
 package InClass;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException{
 
-        String passWord = "q9er8pgy438G";
+        StringBuilder string = new StringBuilder("I ate 100 bluebaries");
 
-        boolean hasNum = false;
-        boolean hasUpper = false;
-        boolean noWhiteSpase = true;
+        // string.deleteCharAt(6);
+        System.out.println(string);
+        
+        System.out.println(Integer.MIN_VALUE);
 
-        for(int i = 0; i < passWord.length(); i++){
 
-            char currChar = passWord.charAt(i);
+        File file = new File("InClass/Testing.csv");
 
-            if(Character.isDigit(currChar)){
-                hasNum = true;
-            }
-            else if(Character.isUpperCase(currChar)){
-                hasUpper = true;
-            }
-            else if(Character.isWhitespace(currChar)){
-                noWhiteSpase = false;
-            }
+        Scanner input = new Scanner(file);
+
+        while(input.hasNext()){
+            System.out.println(input.nextLine());
         }
 
-        if(hasNum && hasUpper && noWhiteSpase){
-            System.out.println("The password is valid");
-        }
-        else{
-            System.out.println("The passsword is not valid");
-        }
+        // input.
 
     }
 }
