@@ -1,29 +1,34 @@
 package InClass;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.Scanner;
+import java.util.ArrayList;
 
-public class Main {
-    public static void main(String[] args) throws FileNotFoundException{
+public class Main{
 
-        StringBuilder string = new StringBuilder("I ate 100 bluebaries");
-
-        // string.deleteCharAt(6);
-        System.out.println(string);
+    public static void main(String[] args) {
         
-        System.out.println(Integer.MIN_VALUE);
+        ArrayList content = new ArrayList<>();
 
+        content.add("Hello World");
+        content.add(1);
+        content.add(true);
 
-        File file = new File("InClass/Testing.csv");
-
-        Scanner input = new Scanner(file);
-
-        while(input.hasNext()){
-            System.out.println(input.nextLine());
+        for(int i = 0; i < content.size(); i ++){
+            System.out.println(content.get(i));
         }
 
-        // input.
+
+        ArrayList<Number> numbers = new ArrayList<>();
+        
+        numbers.add(1);
+        numbers.add(1.01);
+        numbers.add(.9238759328);
+
+        System.out.println(numbers);
+
+
+
+
+
 
     }
 }
