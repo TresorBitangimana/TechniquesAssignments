@@ -68,7 +68,7 @@ public class MiscellaneousString {
     }
 
 
-
+    //test
     public static void main(String[] args) {
   
         System.out.println(wordCount("Hello World"));
@@ -79,8 +79,6 @@ public class MiscellaneousString {
         System.out.println(mostFrequent("wioreughiwolghrtuhgwrhgkuhvihrwe"));
 
         System.out.println(replaceSubstring("the dog jumped over the fence", "the", "that"));
-
-
 
     }
 
