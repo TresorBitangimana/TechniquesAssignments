@@ -1,6 +1,5 @@
 package Assignment4;
 
-import java.nio.charset.CharacterCodingException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -24,7 +23,6 @@ public class MiscellaneousString {
 
     public static char mostFrequent(String string){
 
-        char results = ' ';
         // string = string.toLowerCase();
 
         HashMap<Character, Integer> map = new HashMap<>();
@@ -41,8 +39,6 @@ public class MiscellaneousString {
                 map.put(currChar, map.get(currChar)+1);
             }
         }
-
-        System.out.println(map.toString());
 
         int frequent = 0;
         char letter = ' ';

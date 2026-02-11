@@ -17,7 +17,7 @@ public class GasPrices {
 
         // averagePricePerYear(scanner);
         // averagePricePerMonth(scanner);
-        highestAndLowestPricesPerYear(scanner);
+        // highestAndLowestPricesPerYear(scanner);
         // lowestToHighest(scanner);
         // highestToLowest(scanner);
 
@@ -202,6 +202,7 @@ public class GasPrices {
             lowest = Double.MAX_VALUE;
         }
 
+        writer.close();
     }
 
     public static void highestToLowest(Scanner input) throws IOException{
@@ -238,5 +239,6 @@ public class GasPrices {
             highest = Double.MIN_VALUE;
         }
 
+        writer.close();
     }
 }
