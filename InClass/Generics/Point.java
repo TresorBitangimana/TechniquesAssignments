@@ -10,28 +10,30 @@ public class Point <T> {
         this.y = y;
     }
 
-    void setX(T x){
+    public void setX(T x){
         this.x = x;
     }
-    T getX(){
+    public T getX(){
         return x;
     }
 
-    void setY(T y){
+    public void setY(T y){
         this.y = y;
     }
-    T getY(){
+    public T getY(){
         return y;
     }
 
-    static String sqLength(Point<Number> p){
+    static String sqLength(Point<? extends Number> p){
 
-        double x = p.getX().doubleValue();
-        double y = p.getY().doubleValue();
+        Number nx =  p.getX();
+        Number ny =  p.getY();
+
+        double x = nx.doubleValue();
+        double y = ny.doubleValue();
 
         return "Coordinates: "+ x*x +", " + y*y;
     }
-
 
     @Override
     public String toString() {
@@ -40,7 +42,7 @@ public class Point <T> {
 
     public static void main(String[] args) {
         
-        Point<Number> p = new Point<Number>(3, 4);
+        Point<? extends Number> p = new Point<>(3, 4);
         System.out.println(p.toString());
         System.out.println(sqLength(p));
     }
