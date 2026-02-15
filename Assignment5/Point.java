@@ -10,8 +10,8 @@ public class Point <T> {
         this.y = y;
     }
     public Point(){
-        this.x = x; 
-        this.y = y;
+        // this.x = x; 
+        // this.y = y;
     }
 
     public void setX(T x){

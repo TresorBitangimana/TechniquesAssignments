@@ -2,7 +2,7 @@ package Assignment5;
 
 import java.util.ArrayList;
 
-public class PointList <T extends Point> extends Point {
+public class PointList <T extends Point> extends Point<T> {
     
     private ArrayList<T> pointList;
 

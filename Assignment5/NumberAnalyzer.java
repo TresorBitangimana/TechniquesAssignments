@@ -4,45 +4,45 @@ public class NumberAnalyzer <T extends Number> {
     
     private T[] list;
 
-    NumberAnalyzer(T[] array){
+    public NumberAnalyzer(T[] array){
         list = array;
     }
 
     public T highest(){
-        if(list.length > 0){
+        // if(list.length > 0){
 
             T highest = list[0];
 
-            for(int i = 0; i < list.length; i++){
+            for(int i = 1; i < list.length; i++){
                 if(highest.doubleValue() < list[i].doubleValue()){
                     highest = list[i];
                 }
             }
             return highest;
-        }
-        else{
-            return null;
-        }
+        // }
+        // else{
+        //     return null;
+        // }
     }
 
     public T lowest(){
 
 
-        if(list.length > 0){
+        // if(list.length > 0){
 
             T lowest = list[0]; 
 
-            for(int i = 0; i < list.length; i++){
+            for(int i = 1; i < list.length; i++){
                 if(lowest.doubleValue() > list[i].doubleValue()){
                     lowest = list[i];
                 }
             }
 
             return lowest;
-        }
-        else{
-            return null;
-        }
+        // }
+        // else{
+        //     return null;
+        // }
     }
 
     public double total(){
