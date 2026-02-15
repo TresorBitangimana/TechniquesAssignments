@@ -1,6 +1,6 @@
 package Assignment5.Algorithm_Workbench;
 
-public class MyType <T extends String > {
+public class MyType <T extends Number> {
 
 
 

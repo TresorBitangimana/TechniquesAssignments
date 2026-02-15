@@ -16,6 +16,12 @@ public class Point3D <T extends Number> extends Point<T>{
         return z;
     }
 
+    double sqLength(){
 
+        double x1 = x.doubleValue();
+        double y1 = y.doubleValue();
+
+        return x1 * y1;
+    }
 
 }
