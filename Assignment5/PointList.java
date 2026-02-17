@@ -18,7 +18,7 @@ public class PointList <T extends Point> extends Point<T> {
     public T get(int index){
 
         if(index < 0 || index >= pointList.size()){
-            System.out.println("Out of Bounds");
+            // System.out.println("Out of Bounds");
             return null;
         }
         else{
@@ -34,7 +34,7 @@ public class PointList <T extends Point> extends Point<T> {
     //demo
     public static void main(String[] args){
 
-        PointList<Point> points = new PointList<>();
+        PointList<Point<Number>> points = new PointList<>();
 
         points.add(new Point<Number>(10, 5));
         points.add(new Point<Number>(1, 9));
