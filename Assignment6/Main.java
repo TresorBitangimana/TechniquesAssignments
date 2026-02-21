@@ -16,7 +16,6 @@ public class Main {
         UniversityUtils.printStudents(course.getStudents());
         UniversityUtils.printPerson(student);
         UniversityUtils.printIds(course.getStudents());
-
         UniversityUtils.printArray(course.getStudents());
 
     }
