@@ -14,7 +14,7 @@ public class GraduateStudent extends Student<String>{
     @Override
     public void displayInfo(){
         System.out.println(
-            "Name: "+name+" Role: Student \nID: "+id+" \nGPA: "+gpa+ " \nthesisTitle: " + thesisTitle
+            "Name: "+name+"\nRole: Graduate student \nID: "+id+" \nGPA: "+gpa+ " \nthesisTitle: " + thesisTitle
         );
         
     }

@@ -25,7 +25,7 @@ public class Course<C, S extends Student>{
 
     public void displayInfo(){
         System.out.println(
-            "Couse Code: "+ courseCode + "Students"+ students.toString()
+            "Couse Code: "+ courseCode + "\nStudents"+ students.toString()
         );
     }
 

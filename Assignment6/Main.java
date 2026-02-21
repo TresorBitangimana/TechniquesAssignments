@@ -7,6 +7,17 @@ public class Main {
         GraduateStudent gStudent = new GraduateStudent("987654321", "David", 4.0, "AI researcher");
 
         Course<String, GraduateStudent> course = new Course<>("A12345");
+        course.addStudent(gStudent);
+
+        
+        UniversityUtils.printAll(course.getStudents());
+        UniversityUtils.printStudents(course.getStudents());
+        UniversityUtils.addGraduateStudent(course.getStudents());
+        UniversityUtils.printStudents(course.getStudents());
+        UniversityUtils.printPerson(student);
+
+        // UniversityUtils.printIds(null);
+        // UniversityUtils.printArray(null);
 
     }
 }
