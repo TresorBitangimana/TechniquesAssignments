@@ -11,8 +11,8 @@ public class UniversityUtils {
         }
     }
 
-    public static <E> void printArray(E[] array){
-        for(E i : array){
+    public static void printArray(ArrayList<? extends GraduateStudent> list){
+        for(GraduateStudent i : list){
             System.out.println(i.toString());
         }
     }
@@ -27,7 +27,7 @@ public class UniversityUtils {
         list.add(new GraduateStudent("G999", "New Grad", 4.0, "AI Research"));
     }
 
-    public static void printIds(ArrayList< ? extends Identifiable<?>> list){
+    public static void printIds(ArrayList< ? extends GraduateStudent> list){
         for(Identifiable<?> i : list){
             System.out.println(i.getId());
         }

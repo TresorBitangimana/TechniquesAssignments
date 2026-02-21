@@ -15,9 +15,9 @@ public class Main {
         UniversityUtils.addGraduateStudent(course.getStudents());
         UniversityUtils.printStudents(course.getStudents());
         UniversityUtils.printPerson(student);
+        UniversityUtils.printIds(course.getStudents());
 
-        // UniversityUtils.printIds(null);
-        // UniversityUtils.printArray(null);
+        UniversityUtils.printArray(course.getStudents());
 
     }
 }
