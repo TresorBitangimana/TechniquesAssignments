@@ -1,26 +1,16 @@
 package InClass;
 
-import java.util.ArrayList;
-import java.util.function.Predicate;
+import java.util.Arrays;
+import java.util.List;
 
-public class Main{
-
+public class Main {
+ 
     public static void main(String[] args) {
         
-        Predicate<Integer> isEven = num -> num % 2 == 0;
-        System.out.println(isEven.test(10));
-
-
-        ArrayList<Integer> numbers = new ArrayList<>();
-        numbers.add(1);
-        numbers.add(2);
-        numbers.add(3);
-        numbers.add(4);
-        numbers.add(5);
-        numbers.add(6);
-
-
-        numbers.forEach(System.out::println);
+        // List<String> list = Arrays.asList("null", "one");  
+        // System.out.println(list);
 
     }
+
 }
+
