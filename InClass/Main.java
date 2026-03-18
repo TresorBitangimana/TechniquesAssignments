@@ -1,7 +1,6 @@
 package InClass;
 
-import java.util.Arrays;
-import java.util.List;
+
 
 public class Main {
  
@@ -9,6 +8,8 @@ public class Main {
         
         // List<String> list = Arrays.asList("null", "one");  
         // System.out.println(list);
+
+        // System.out.println("A".compareToIgnoreCase("a"));
 
     }
 
