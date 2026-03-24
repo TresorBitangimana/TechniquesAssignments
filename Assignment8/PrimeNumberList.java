@@ -2,21 +2,31 @@ package Assignment8;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.ListIterator;
 
 public class PrimeNumberList {
     public static void main(String[] args) {
-
         List<Integer> primeList = new ArrayList<>();
 
-        for (int i = 0; i < 100; i++) {
-            for (int j = 2; j < i; j++) {
-                if (i % j == 0 && i == j) {
-                    primeList.add(i);
+        // finds all prime number from 1-100 and stole them in the primeList ArrayList.
+        for (int i = 2; i <= 100; i++) {
+            boolean isPrime = true;
+            for (int j = 2; j <= i; j++) {
+                if (i % j == 0 && i != j) {
+                    isPrime = false;
+                    break;
                 }
             }
+            if (isPrime)
+                primeList.add(i);
         }
+        // adds the list iterater
+        ListIterator it = primeList.listIterator();
 
-        System.out.println(primeList.toString());
+        // iterates through the list.
+        while (it.hasNext()) {
+            System.out.println(it.next());
+        }
 
     }
 }
