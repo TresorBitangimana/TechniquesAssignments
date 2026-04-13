@@ -1,35 +1,68 @@
 package InClass;
 
-import java.util.Arrays;
-import java.util.Random;
-import java.util.stream.IntStream;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.RandomAccessFile;
+import java.util.Scanner;
 
 public class Main {
-
     public static void main(String[] args) {
 
-        int[] numbers = new int[10];
-        IntStream nums = Arrays.stream(numbers);
-        // for(int n : numbers){
-        // System.out.println(n);
+        try (FileOutputStream outPutStream = new FileOutputStream("InClass/Test.txt")) {
+            DataOutputStream dataOutput = new DataOutputStream(outPutStream);
+
+            int randNum = 0;
+
+            for (int i = 0; i < 100; i++) {
+                randNum = (int) (Math.random() * 2);
+                dataOutput.write(randNum);
+            }
+
+        } catch (FileNotFoundException e) {
+            System.out.println(e);
+        } catch (IOException e) {
+            System.out.println(e);
+        }
+
+        try (FileInputStream inpuStream = new FileInputStream("InClass/Test.txt")) {
+            DataInputStream dataInputStream = new DataInputStream(inpuStream);
+
+            while (dataInputStream.available() > 0) {
+                System.out.println(dataInputStream.readInt());
+            }
+
+        } catch (FileNotFoundException e) {
+            System.out.println(e);
+        } catch (IOException e) {
+            System.out.println(e);
+        }
+
+        // try {
+        // RandomAccessFile randomFile = new RandomAccessFile("InClass/Test.txt", "rw");
+        // for (int i = 0; i < 100; i++) {
+        // randomFile.write((int) (Math.random() * 101));
+        // }
+        // randomFile.close();
+        // } catch (FileNotFoundException e) {
+        // System.out.println(e);
+        // } catch (IOException e) {
+        // System.out.println(e);
         // }
 
-        nums.forEach(s -> {
-            System.out.println(s);
-        });
+        // try (Scanner scanner = new Scanner(new File("InClass/Test.txt"))) {
 
-        Random random = new Random();
+        // while (scanner.hasNext()) {
+        // System.out.println(scanner.next());
+        // }
 
-        IntStream infRandom = random.ints(0, 10);
-
-        int[] evenRandomArr = infRandom
-                .peek(x -> {
-                    System.out.println("num: " + x);
-                })
-                .filter(x -> x % 2 == 0)
-                .limit(5)
-                .toArray();
-        System.out.println(Arrays.toString(evenRandomArr));
+        // } catch (FileNotFoundException e) {
+        // System.out.println(e);
+        // }
 
     }
 }
