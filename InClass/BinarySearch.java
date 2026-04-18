@@ -8,9 +8,9 @@ public class BinarySearch {
 
         int searchValue = 17;
         boolean isFound = false;
-        int index = null;
+        // int index = null;
 
-        int start = 0;
+        // int start = 0;
 
         while (isFound) {
             int middle = numbers.length / 2;

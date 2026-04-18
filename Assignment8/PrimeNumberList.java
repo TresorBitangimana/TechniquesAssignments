@@ -21,7 +21,7 @@ public class PrimeNumberList {
                 primeList.add(i);
         }
         // adds the list iterater
-        ListIterator it = primeList.listIterator();
+        ListIterator<Integer> it = primeList.listIterator();
 
         // iterates through the list.
         while (it.hasNext()) {

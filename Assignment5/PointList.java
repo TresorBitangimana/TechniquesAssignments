@@ -2,26 +2,25 @@ package Assignment5;
 
 import java.util.ArrayList;
 
-public class PointList <T extends Point> extends Point<T> {
-    
+public class PointList<T extends Point<?>> extends Point<T> {
+
     private ArrayList<T> pointList;
 
-    public PointList(){
+    public PointList() {
         super();
         pointList = new ArrayList<>();
     }
 
-    public void add(T value){
+    public void add(T value) {
         pointList.add(value);
     }
 
-    public T get(int index){
+    public T get(int index) {
 
-        if(index < 0 || index >= pointList.size()){
+        if (index < 0 || index >= pointList.size()) {
             // System.out.println("Out of Bounds");
             return null;
-        }
-        else{
+        } else {
             return pointList.get(index);
         }
     }
@@ -31,8 +30,8 @@ public class PointList <T extends Point> extends Point<T> {
         return pointList.toString();
     }
 
-    //demo
-    public static void main(String[] args){
+    // demo
+    public static void main(String[] args) {
 
         PointList<Point<Number>> points = new PointList<>();
 
@@ -49,8 +48,6 @@ public class PointList <T extends Point> extends Point<T> {
         System.out.println(points.get(3));
 
         System.out.println(points.toString());
-
-
 
     }
 
