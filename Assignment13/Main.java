@@ -1,22 +1,16 @@
 package Assignment13;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
 
-        // System.out.println(multiply(10, 0));
-
+        System.out.println(multiply(10, 0));
         int[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-        // System.out.println(isMember(numbers, 3, 0));
-
-        // reverseString("Hello World!!!");
-
-        // System.out.println(maxElement(numbers));
-
-        // System.out.println(raise(2, 0));
-
+        System.out.println(isMember(numbers, 3, 0));
+        reverseString("Hello World!!!");
+        System.out.println(maxElement(numbers));
+        System.out.println(raise(2, 0));
         System.out.println(sumOfInt(4));
 
     }
@@ -79,11 +73,9 @@ public class Main {
 
     // challenge 8
     public static int sumOfInt(int x) {
-
         if (x == 0) {
             return 0;
         }
         return x + sumOfInt(x - 1);
-
     }
 }
